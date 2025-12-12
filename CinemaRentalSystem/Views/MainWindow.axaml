@@ -1,0 +1,84 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:CinemaRentalSystem.ViewModels"
+        xmlns:views="using:CinemaRentalSystem.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="700"
+        x:Class="CinemaRentalSystem.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Система учета проката кинофильмов"
+        Width="1200" Height="700"
+        WindowStartupLocation="CenterScreen">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Меню вкладок -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Background="#2C3E50" Margin="0,0,0,10">
+            <Button Content="Кинотеатры" 
+                    Padding="20,10" 
+                    Margin="5"
+                    Background="#3498DB"
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Command="{Binding ShowCinemasCommand}"/>
+            
+            <Button Content="Поставщики" 
+                    Padding="20,10" 
+                    Margin="5"
+                    Background="#9B59B6"
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Command="{Binding ShowSuppliersCommand}"/>
+            
+            <Button Content="Фильмы" 
+                    Padding="20,10" 
+                    Margin="5"
+                    Background="#E67E22"
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Command="{Binding ShowFilmsCommand}"/>
+            
+            <Button Content="Аренда" 
+                    Padding="20,10" 
+                    Margin="5"
+                    Background="#16A085"
+                    Foreground="White"
+                    FontSize="14"
+                    FontWeight="SemiBold"
+                    Command="{Binding ShowRentalsCommand}"/>
+        </StackPanel>
+
+        <!-- Содержимое вкладок -->
+        <Border Grid.Row="1" Padding="10">
+            <ContentControl Content="{Binding CurrentView}">
+                <ContentControl.DataTemplates>
+                    <DataTemplate DataType="vm:CinemasViewModel">
+                        <views:CinemasView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="vm:SuppliersViewModel">
+                        <views:SuppliersView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="vm:FilmsViewModel">
+                        <views:FilmsView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="vm:RentalsViewModel">
+                        <views:RentalsView/>
+                    </DataTemplate>
+                </ContentControl.DataTemplates>
+            </ContentControl>
+        </Border>
+    </Grid>
+</Window>

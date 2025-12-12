@@ -1,0 +1,346 @@
+{
+  "cinemas": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "name": "Синема Парк",
+      "address": "г. Новосибирск, ул. Ленина, д. 100",
+      "phone": "+7 (383) 123-45-67",
+      "seatsCount": 250,
+      "director": "Иванов Иван Иванович",
+      "owner": "ООО \"Кинопоказ\"",
+      "bank": "ПАО Сбербанк",
+      "accountNumber": "40702810123456789012",
+      "inn": "5401234567"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "name": "Победа",
+      "address": "г. Новосибирск, пр. Карла Маркса, д. 50",
+      "phone": "+7 (383) 234-56-78",
+      "seatsCount": 180,
+      "director": "Петрова Мария Сергеевна",
+      "owner": "ИП Петрова М.С.",
+      "bank": "ВТБ",
+      "accountNumber": "40702810234567890123",
+      "inn": "540234567890"
+    },
+    {
+      "id": "11111111-2222-3333-4444-555555555555",
+      "name": "Киномир",
+      "address": "г. Новосибирск, ул. Станиславского, д. 6а",
+      "phone": "+7 (383) 345-67-89",
+      "seatsCount": 320,
+      "director": "Смирнов Алексей Петрович",
+      "owner": "ООО \"Киномир\"",
+      "bank": "ПАО Сбербанк",
+      "accountNumber": "40702810567890123456",
+      "inn": "5403456789"
+    },
+    {
+      "id": "22222222-3333-4444-5555-666666666666",
+      "name": "Галактика",
+      "address": "г. Новосибирск, Красный проспект, д. 101",
+      "phone": "+7 (383) 456-78-90",
+      "seatsCount": 400,
+      "director": "Козлова Елена Викторовна",
+      "owner": "АО \"Галактика-Кино\"",
+      "bank": "ВТБ",
+      "accountNumber": "40702810678901234567",
+      "inn": "5404567890"
+    },
+    {
+      "id": "33333333-4444-5555-6666-777777777777",
+      "name": "Аврора",
+      "address": "г. Новосибирск, ул. Гоголя, д. 15",
+      "phone": "+7 (383) 567-89-01",
+      "seatsCount": 150,
+      "director": "Николаев Сергей Андреевич",
+      "owner": "ИП Николаев С.А.",
+      "bank": "Альфа-Банк",
+      "accountNumber": "40702810789012345678",
+      "inn": "540567890123"
+    },
+    {
+      "id": "44444444-5555-6666-7777-888888888888",
+      "name": "Планета Кино",
+      "address": "г. Новосибирск, пр. Дзержинского, д. 24",
+      "phone": "+7 (383) 678-90-12",
+      "seatsCount": 280,
+      "director": "Волков Дмитрий Олегович",
+      "owner": "ООО \"Планета Развлечений\"",
+      "bank": "ПАО Сбербанк",
+      "accountNumber": "40702810890123456789",
+      "inn": "5406789012"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "name": "ООО \"Кинопрокат\"",
+      "legalAddress": "г. Москва, ул. Тверская, д. 1",
+      "bank": "ПАО Сбербанк",
+      "accountNumber": "40702810345678901234",
+      "inn": "7701234567"
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-def1-234567890123",
+      "name": "АО \"Киносфера\"",
+      "legalAddress": "г. Санкт-Петербург, Невский пр., д. 10",
+      "bank": "Альфа-Банк",
+      "accountNumber": "40702810456789012345",
+      "inn": "7802345678"
+    },
+    {
+      "id": "55555555-6666-7777-8888-999999999999",
+      "name": "ООО \"Мир Кино\"",
+      "legalAddress": "г. Москва, ул. Арбат, д. 25",
+      "bank": "ВТБ",
+      "accountNumber": "40702810901234567890",
+      "inn": "7703456789"
+    },
+    {
+      "id": "66666666-7777-8888-9999-000000000000",
+      "name": "ЗАО \"Синема Дистрибуция\"",
+      "legalAddress": "г. Екатеринбург, ул. Ленина, д. 50",
+      "bank": "ПАО Сбербанк",
+      "accountNumber": "40702810012345678901",
+      "inn": "6608765432"
+    }
+  ],
+  "films": [
+    {
+      "id": "f1f1f1f1-1111-1111-1111-111111111111",
+      "title": "Операция \"Фортуна\"",
+      "category": "боевик, триллер",
+      "screenwriter": "Гай Ричи",
+      "director": "Гай Ричи",
+      "productionCompany": "Miramax",
+      "releaseYear": 2023,
+      "supplierId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "purchaseCost": 180000
+    },
+    {
+      "id": "f2f2f2f2-2222-2222-2222-222222222222",
+      "title": "Аватар: Путь воды",
+      "category": "фантастика, приключения",
+      "screenwriter": "Джеймс Кэмерон",
+      "director": "Джеймс Кэмерон",
+      "productionCompany": "20th Century Studios",
+      "releaseYear": 2022,
+      "supplierId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "purchaseCost": 250000
+    },
+    {
+      "id": "f3f3f3f3-3333-3333-3333-333333333333",
+      "title": "Оппенгеймер",
+      "category": "драма, биография",
+      "screenwriter": "Кристофер Нолан",
+      "director": "Кристофер Нолан",
+      "productionCompany": "Universal Pictures",
+      "releaseYear": 2023,
+      "supplierId": "d4e5f6a7-b8c9-0123-def1-234567890123",
+      "purchaseCost": 220000
+    },
+    {
+      "id": "f4f4f4f4-4444-4444-4444-444444444444",
+      "title": "Барби",
+      "category": "комедия, фэнтези",
+      "screenwriter": "Грета Гервиг",
+      "director": "Грета Гервиг",
+      "productionCompany": "Warner Bros.",
+      "releaseYear": 2023,
+      "supplierId": "d4e5f6a7-b8c9-0123-def1-234567890123",
+      "purchaseCost": 210000
+    },
+    {
+      "id": "f5f5f5f5-5555-5555-5555-555555555555",
+      "title": "Дюна: Часть вторая",
+      "category": "фантастика, драма",
+      "screenwriter": "Дени Вильнёв",
+      "director": "Дени Вильнёв",
+      "productionCompany": "Warner Bros.",
+      "releaseYear": 2024,
+      "supplierId": "55555555-6666-7777-8888-999999999999",
+      "purchaseCost": 240000
+    },
+    {
+      "id": "f6f6f6f6-6666-6666-6666-666666666666",
+      "title": "Джон Уик 4",
+      "category": "боевик, триллер",
+      "screenwriter": "Шей Хаттен",
+      "director": "Чад Стахелски",
+      "productionCompany": "Lionsgate",
+      "releaseYear": 2023,
+      "supplierId": "55555555-6666-7777-8888-999999999999",
+      "purchaseCost": 190000
+    },
+    {
+      "id": "f7f7f7f7-7777-7777-7777-777777777777",
+      "title": "Начало",
+      "category": "фантастика, триллер",
+      "screenwriter": "Кристофер Нолан",
+      "director": "Кристофер Нолан",
+      "productionCompany": "Warner Bros.",
+      "releaseYear": 2010,
+      "supplierId": "66666666-7777-8888-9999-000000000000",
+      "purchaseCost": 160000
+    },
+    {
+      "id": "f8f8f8f8-8888-8888-8888-888888888888",
+      "title": "Интерстеллар",
+      "category": "фантастика, драма",
+      "screenwriter": "Кристофер Нолан",
+      "director": "Кристофер Нолан",
+      "productionCompany": "Paramount Pictures",
+      "releaseYear": 2014,
+      "supplierId": "66666666-7777-8888-9999-000000000000",
+      "purchaseCost": 175000
+    },
+    {
+      "id": "f9f9f9f9-9999-9999-9999-999999999999",
+      "title": "Бегущий по лезвию 2049",
+      "category": "фантастика, детектив",
+      "screenwriter": "Хэмптон Фанчер",
+      "director": "Дени Вильнёв",
+      "productionCompany": "Warner Bros.",
+      "releaseYear": 2017,
+      "supplierId": "c3d4e5f6-a7b8-9012-cdef-123456789012",
+      "purchaseCost": 165000
+    },
+    {
+      "id": "fafafafa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "title": "Довод",
+      "category": "фантастика, триллер",
+      "screenwriter": "Кристофер Нолан",
+      "director": "Кристофер Нолан",
+      "productionCompany": "Warner Bros.",
+      "releaseYear": 2020,
+      "supplierId": "d4e5f6a7-b8c9-0123-def1-234567890123",
+      "purchaseCost": 200000
+    },
+    {
+      "id": "fbfbfbfb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "title": "Зеленая книга",
+      "category": "драма, комедия",
+      "screenwriter": "Ник Валлелонга",
+      "director": "Питер Фаррелли",
+      "productionCompany": "Universal Pictures",
+      "releaseYear": 2018,
+      "supplierId": "55555555-6666-7777-8888-999999999999",
+      "purchaseCost": 140000
+    },
+    {
+      "id": "fcfcfcfc-cccc-cccc-cccc-cccccccccccc",
+      "title": "1+1",
+      "category": "драма, комедия",
+      "screenwriter": "Оливье Накаш",
+      "director": "Оливье Накаш",
+      "productionCompany": "Quad Productions",
+      "releaseYear": 2011,
+      "supplierId": "66666666-7777-8888-9999-000000000000",
+      "purchaseCost": 120000
+    }
+  ],
+  "rentals": [
+    {
+      "id": "a1a1a1a1-1111-1111-1111-111111111111",
+      "cinemaId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "filmId": "f2f2f2f2-2222-2222-2222-222222222222",
+      "demonstrationStartDate": "2024-12-01T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-15T00:00:00+07:00",
+      "rentalPayment": 85000,
+      "lateFee": 0,
+      "notes": "Премьерный показ"
+    },
+    {
+      "id": "a2a2a2a2-2222-2222-2222-222222222222",
+      "cinemaId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "filmId": "f3f3f3f3-3333-3333-3333-333333333333",
+      "demonstrationStartDate": "2024-11-20T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-10T00:00:00+07:00",
+      "rentalPayment": 95000,
+      "lateFee": 0,
+      "notes": ""
+    },
+    {
+      "id": "a3a3a3a3-3333-3333-3333-333333333333",
+      "cinemaId": "11111111-2222-3333-4444-555555555555",
+      "filmId": "f5f5f5f5-5555-5555-5555-555555555555",
+      "demonstrationStartDate": "2024-12-05T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-25T00:00:00+07:00",
+      "rentalPayment": 120000,
+      "lateFee": 0,
+      "notes": "Новогодний прокат"
+    },
+    {
+      "id": "a4a4a4a4-4444-4444-4444-444444444444",
+      "cinemaId": "22222222-3333-4444-5555-666666666666",
+      "filmId": "f4f4f4f4-4444-4444-4444-444444444444",
+      "demonstrationStartDate": "2024-11-15T00:00:00+07:00",
+      "demonstrationEndDate": "2024-11-30T00:00:00+07:00",
+      "rentalPayment": 78000,
+      "lateFee": 5000,
+      "notes": "Возврат с опозданием на 2 дня"
+    },
+    {
+      "id": "a5a5a5a5-5555-5555-5555-555555555555",
+      "cinemaId": "33333333-4444-5555-6666-777777777777",
+      "filmId": "f7f7f7f7-7777-7777-7777-777777777777",
+      "demonstrationStartDate": "2024-11-25T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-08T00:00:00+07:00",
+      "rentalPayment": 65000,
+      "lateFee": 0,
+      "notes": "Классика кино"
+    },
+    {
+      "id": "a6a6a6a6-6666-6666-6666-666666666666",
+      "cinemaId": "44444444-5555-6666-7777-888888888888",
+      "filmId": "f6f6f6f6-6666-6666-6666-666666666666",
+      "demonstrationStartDate": "2024-12-01T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-20T00:00:00+07:00",
+      "rentalPayment": 110000,
+      "lateFee": 0,
+      "notes": "Боевик сезона"
+    },
+    {
+      "id": "a7a7a7a7-7777-7777-7777-777777777777",
+      "cinemaId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+      "filmId": "f8f8f8f8-8888-8888-8888-888888888888",
+      "demonstrationStartDate": "2024-11-10T00:00:00+07:00",
+      "demonstrationEndDate": "2024-11-28T00:00:00+07:00",
+      "rentalPayment": 72000,
+      "lateFee": 3000,
+      "notes": "Несвоевременный возврат"
+    },
+    {
+      "id": "a8a8a8a8-8888-8888-8888-888888888888",
+      "cinemaId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+      "filmId": "fbfbfbfb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+      "demonstrationStartDate": "2024-11-18T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-02T00:00:00+07:00",
+      "rentalPayment": 55000,
+      "lateFee": 0,
+      "notes": ""
+    },
+    {
+      "id": "a9a9a9a9-9999-9999-9999-999999999999",
+      "cinemaId": "11111111-2222-3333-4444-555555555555",
+      "filmId": "fafafafa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "demonstrationStartDate": "2024-11-22T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-12T00:00:00+07:00",
+      "rentalPayment": 98000,
+      "lateFee": 0,
+      "notes": "Фантастика Нолана"
+    },
+    {
+      "id": "b0b0b0b0-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "cinemaId": "22222222-3333-4444-5555-666666666666",
+      "filmId": "f1f1f1f1-1111-1111-1111-111111111111",
+      "demonstrationStartDate": "2024-12-03T00:00:00+07:00",
+      "demonstrationEndDate": "2024-12-18T00:00:00+07:00",
+      "rentalPayment": 88000,
+      "lateFee": 0,
+      "notes": ""
+    }
+  ]
+}

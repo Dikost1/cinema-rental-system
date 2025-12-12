@@ -1,0 +1,140 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:CinemaRentalSystem.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1100" d:DesignHeight="650"
+             x:Class="CinemaRentalSystem.Views.SuppliersView"
+             x:DataType="vm:SuppliersViewModel">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Список поставщиков -->
+        <Border Grid.Column="0" BorderBrush="#BDC3C7" BorderThickness="1" Margin="5" CornerRadius="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" 
+                           Text="Список поставщиков" 
+                           FontSize="16" 
+                           FontWeight="Bold" 
+                           Margin="10"
+                           Foreground="#2C3E50"/>
+
+                <ListBox Grid.Row="1" 
+                         ItemsSource="{Binding Suppliers}"
+                         SelectedItem="{Binding SelectedSupplier}"
+                         Margin="5"
+                         Background="#ECF0F1">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="5">
+                                <TextBlock Text="{Binding Name}" 
+                                           FontWeight="SemiBold" 
+                                           FontSize="14"/>
+                                <TextBlock Text="{Binding LegalAddress}" 
+                                           FontSize="12" 
+                                           Foreground="#7F8C8D"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Grid>
+        </Border>
+
+        <!-- Форма редактирования -->
+        <Border Grid.Column="1" BorderBrush="#BDC3C7" BorderThickness="1" Margin="5" CornerRadius="5">
+            <ScrollViewer>
+                <StackPanel Margin="10">
+                    <TextBlock Text="Информация о поставщике" 
+                               FontSize="16" 
+                               FontWeight="Bold" 
+                               Margin="0,0,0,15"
+                               Foreground="#2C3E50"/>
+
+                    <!-- Общее сообщение об ошибке -->
+                    <Border Background="#FFE6E6" 
+                            BorderBrush="#E74C3C" 
+                            BorderThickness="1" 
+                            CornerRadius="3" 
+                            Padding="10" 
+                            Margin="0,0,0,10"
+                            IsVisible="{Binding HasErrorMessage}">
+                        <TextBlock Text="{Binding ErrorMessage}" 
+                                   Foreground="#C0392B" 
+                                   TextWrapping="Wrap"/>
+                    </Border>
+
+                    <TextBlock Text="Название компании:" Margin="0,5,0,2"/>
+                    <TextBox Text="{Binding EditingSupplier.Name, Mode=TwoWay}" Watermark="Введите название компании..."/>
+                    <TextBlock Text="{Binding NameError}" 
+                               Foreground="#E74C3C" 
+                               FontSize="11" 
+                               Margin="0,2,0,0"
+                               IsVisible="{Binding HasNameError}"/>
+
+                    <TextBlock Text="Юридический адрес:" Margin="0,10,0,2"/>
+                    <TextBox Text="{Binding EditingSupplier.LegalAddress, Mode=TwoWay}" Watermark="Введите юридический адрес..."/>
+
+                    <TextBlock Text="Банк:" Margin="0,10,0,2"/>
+                    <TextBox Text="{Binding EditingSupplier.Bank, Mode=TwoWay}" Watermark="Название банка"/>
+
+                    <TextBlock Text="Номер счета:" Margin="0,10,0,2"/>
+                    <TextBox Text="{Binding EditingSupplier.AccountNumber, Mode=TwoWay}" Watermark="40702810... (20 цифр)"/>
+                    <TextBlock Text="{Binding AccountNumberError}" 
+                               Foreground="#E74C3C" 
+                               FontSize="11" 
+                               Margin="0,2,0,0"
+                               IsVisible="{Binding HasAccountNumberError}"/>
+
+                    <TextBlock Text="ИНН:" Margin="0,10,0,2"/>
+                    <TextBox Text="{Binding EditingSupplier.INN, Mode=TwoWay}" Watermark="10 или 12 цифр"/>
+                    <TextBlock Text="{Binding INNError}" 
+                               Foreground="#E74C3C" 
+                               FontSize="11" 
+                               Margin="0,2,0,0"
+                               IsVisible="{Binding HasINNError}"/>
+
+                    <!-- Кнопки управления -->
+                    <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
+                        <Button Content="Добавить" 
+                                Command="{Binding AddCommand}"
+                                Background="#27AE60"
+                                Foreground="White"
+                                Padding="15,8"
+                                Margin="5"/>
+                        
+                        <Button Content="Обновить" 
+                                Command="{Binding UpdateCommand}"
+                                Background="#3498DB"
+                                Foreground="White"
+                                Padding="15,8"
+                                Margin="5"/>
+                        
+                        <Button Content="Удалить" 
+                                Command="{Binding DeleteCommand}"
+                                Background="#E74C3C"
+                                Foreground="White"
+                                Padding="15,8"
+                                Margin="5"/>
+                        
+                        <Button Content="Очистить" 
+                                Command="{Binding ClearCommand}"
+                                Background="#95A5A6"
+                                Foreground="White"
+                                Padding="15,8"
+                                Margin="5"/>
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</UserControl>
+

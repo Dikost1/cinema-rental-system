@@ -1,0 +1,26 @@
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+
+# Data files (рабочие данные пользователя)
+suppliers.txt
+films.txt
+
+# Visual Studio files
+.vs/
+.vscode/
+
+# macOS
+.DS_Store
+
+# Rider
+.idea/
+*.sln.iml
