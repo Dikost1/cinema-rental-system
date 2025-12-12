@@ -59,14 +59,6 @@
                     FontSize="14"
                     FontWeight="SemiBold"
                     Command="{Binding ShowRentalsCommand}"/>
-            
-            <Button Content="студент" 
-                    Padding="20,10" 
-                    Margin="5"
-                    Background="#FF8C00"
-                    Foreground="White"
-                    FontSize="14"
-                    FontWeight="SemiBold"/>
         </StackPanel>
 
         <!-- Содержимое вкладок -->
