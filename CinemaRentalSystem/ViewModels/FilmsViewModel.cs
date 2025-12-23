@@ -35,11 +35,15 @@ namespace CinemaRentalSystem.ViewModels
             get => _selectedFilm;
             set
             {
-                SetProperty(ref _selectedFilm, value);
-                if (value != null)
+                if (SetProperty(ref _selectedFilm, value))
                 {
-                    EditingFilm = CloneFilm(value);
-                    SelectedSupplier = Suppliers.FirstOrDefault(s => s.Id == value.SupplierId);
+                    if (value != null)
+                    {
+                        EditingFilm = CloneFilm(value);
+                        SelectedSupplier = Suppliers.FirstOrDefault(s => s.Id == value.SupplierId);
+                    }
+                    ((RelayCommand)DeleteCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)UpdateCommand).RaiseCanExecuteChanged();
                 }
             }
         }

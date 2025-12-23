@@ -72,3 +72,4 @@ $RECYCLE.BIN/
 # Data file (не игнорируем для курсовой работы, но можно добавить)
 # cinema_rental_data.json
 
+.cursor/

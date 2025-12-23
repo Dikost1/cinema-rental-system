@@ -41,12 +41,16 @@ namespace CinemaRentalSystem.ViewModels
             get => _selectedRental;
             set
             {
-                SetProperty(ref _selectedRental, value);
-                if (value != null)
+                if (SetProperty(ref _selectedRental, value))
                 {
-                    EditingRental = CloneRental(value);
-                    SelectedCinema = Cinemas.FirstOrDefault(c => c.Id == value.CinemaId);
-                    SelectedFilm = Films.FirstOrDefault(f => f.Id == value.FilmId);
+                    if (value != null)
+                    {
+                        EditingRental = CloneRental(value);
+                        SelectedCinema = Cinemas.FirstOrDefault(c => c.Id == value.CinemaId);
+                        SelectedFilm = Films.FirstOrDefault(f => f.Id == value.FilmId);
+                    }
+                    ((RelayCommand)DeleteCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)UpdateCommand).RaiseCanExecuteChanged();
                 }
             }
         }

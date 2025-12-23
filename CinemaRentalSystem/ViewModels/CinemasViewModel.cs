@@ -35,10 +35,14 @@ namespace CinemaRentalSystem.ViewModels
             get => _selectedCinema;
             set
             {
-                SetProperty(ref _selectedCinema, value);
-                if (value != null)
+                if (SetProperty(ref _selectedCinema, value))
                 {
-                    EditingCinema = CloneCinema(value);
+                    if (value != null)
+                    {
+                        EditingCinema = CloneCinema(value);
+                    }
+                    ((RelayCommand)DeleteCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)UpdateCommand).RaiseCanExecuteChanged();
                 }
             }
         }

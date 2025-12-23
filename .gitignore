@@ -44,3 +44,10 @@ $RECYCLE.BIN/
 # cinema_rental_data.json
 # films_example.txt
 # suppliers_example.txt
+
+# Published builds (too large for git)
+publish/
+**/publish/
+
+# Temporary folders
+для_удаления/

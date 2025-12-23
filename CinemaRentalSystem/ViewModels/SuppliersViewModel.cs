@@ -30,10 +30,14 @@ namespace CinemaRentalSystem.ViewModels
             get => _selectedSupplier;
             set
             {
-                SetProperty(ref _selectedSupplier, value);
-                if (value != null)
+                if (SetProperty(ref _selectedSupplier, value))
                 {
-                    EditingSupplier = CloneSupplier(value);
+                    if (value != null)
+                    {
+                        EditingSupplier = CloneSupplier(value);
+                    }
+                    ((RelayCommand)DeleteCommand).RaiseCanExecuteChanged();
+                    ((RelayCommand)UpdateCommand).RaiseCanExecuteChanged();
                 }
             }
         }
