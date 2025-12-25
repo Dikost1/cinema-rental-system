@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <None Update="cinema_rental_data.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
